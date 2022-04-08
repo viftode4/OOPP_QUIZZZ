@@ -1,0 +1,35 @@
+ - Joker buttons
+
+    - Scenario: The jokers should display cards with symbols on them, indicating their function.
+                Upon pressing one of the joker buttons, their respective task should be executed.
+                The card should be flipped and not be able to be activated again for the duration of the game.
+
+       - Double points joker: The joker is available on all question screens.
+
+            - Test 1 : The joker is pressed and turns over immediately.
+                       The user presses the correct answer and, once all player have answered, is rewarded with double the amount of points they would normally have received.
+                       This score update is reflected both on the client ("Score" label updated) and on the server (Leaderboard is updated).
+                       The joker is unable to be used again until the user leaves the game OR the game ends.
+                       Passed.
+
+            - Test 2 : The joker is pressed and turns over immediately.
+                       The user presses the wrong answer and, once all player have answered, is not rewarded any points.
+                       This score update is reflected both on the client ("Score" label updated) and on the server (Leaderboard is updated).
+                       The joker is unable to be used again until the user leaves the game OR the game ends.
+                       Passed.
+
+       - Clairvoyance joker: The joker is not available on the guess question screen, as there are no wrong answers to eliminate.
+
+            - Test 1 : The joker is pressed and turns over immediately.
+                       One of the wrong answers is given an orange colour and displays the text "Is incorrect" for the player who used the joker.
+                       The joker cannot be used until the user leaves the game OR the game ends.
+                       Passed.
+
+
+       - Haste joker: The joker is available on all question screens.
+
+            - Test 1 : The joker is pressed and turns over immediately.
+                       The timer for all players currently in the game is halved, including the player who used the joker.
+                       The joker cannot be used until the user leaves the game OR the game ends.
+                       Passed.
+

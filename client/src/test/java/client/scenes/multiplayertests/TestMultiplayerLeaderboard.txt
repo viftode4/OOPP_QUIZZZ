@@ -1,0 +1,21 @@
+Table
+
+    - Scenario: the players have finished answering a question and the leaderboard window is now displayed
+
+        - Test: The leaderboard contains all players playing the game and their current scores
+                The leaderboard is sorted based on player scores from high to low
+                Passed.
+
+Button
+
+    - Leave game button
+
+        - Scenario: Upon wanting to leave the game, the player clicks the leave game button.
+
+            - Test 1: The player answers "yes" to the prompt asking them if they really want to leave
+                      The player is returned to the main menu and no longer participating in the game.
+                      Passed.
+
+            - Test 2: The player answers "no" to the prompt asking them if they really want to leave.
+                      The player continues playing the game as if nothing happened.
+                      Passed.

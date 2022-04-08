@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AdminInterfaceCtrl">
+   <children>
+      <TableView fx:id="databaseview" layoutX="3.0" prefHeight="608.0" prefWidth="1396.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="97.0" text="ID" />
+          <TableColumn fx:id="col_activity" prefWidth="734.0" text="Activity" />
+            <TableColumn fx:id="col_cons" prefWidth="285.0" text="Consumption" />
+            <TableColumn fx:id="col_image" prefWidth="562.0" text="Image" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox layoutX="-1.0" layoutY="643.0" prefHeight="48.0" prefWidth="1402.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="30.0" />
+            <TextField fx:id="ActivityTitle" prefHeight="48.0" prefWidth="226.0" text="Title">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Consumption" prefHeight="49.0" prefWidth="174.0" text="Consumption">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="17.0" prefWidth="26.0" />
+            <Label fx:id="ImageFileName" prefHeight="51.0" prefWidth="136.0" text="Image name">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="AddImage" mnemonicParsing="false" onAction="#AddImageForNewActivitiy" prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: white;" text="Choose Image" textFill="#0179ff">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="AddActivity" mnemonicParsing="false" onAction="#AddActivity" prefHeight="53.0" prefWidth="280.0" style="-fx-background-color: white;" text="Add Activity" textFill="#ff3103">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="returntomenu" mnemonicParsing="false" onAction="#returnmenu" prefHeight="50.0" prefWidth="342.0" style="-fx-background-color: white;" text="Return To Main Menu" textFill="#0179ff">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Label fx:id="prompterror" layoutX="463.0" layoutY="611.0" prefHeight="32.0" prefWidth="443.0" />
+   </children>
+</AnchorPane>

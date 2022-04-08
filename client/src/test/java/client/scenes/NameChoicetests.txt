@@ -1,0 +1,37 @@
+SinglePlayer
+
+Buttons
+    - Play
+        - Scenario: Upon pressing the play button the input from the textfield should be used as the username for the player who is playing, also player should be transferred to game window
+        - Test: Inputting a string for username and pressing the button transfers to the game window, after playing the game and fully , the username comes up on the global leaderboard, hence the text input was received as well
+            PASSED
+    - Return to Menu
+        - Scenario : Upon pressing the button player should be return to the main menu window
+        - test: Pressing the button, it does return to main menu
+        PASSED
+
+TextInput
+
+    - Username input
+        - Scenario: Upon pressing the play button the username should be associated with the player
+        - Test: inputting a string and pressing play, The global leaderboard shows the username after a game was finished, hence it associates player with username
+        PASSED
+
+MultiPlayer
+
+Buttons
+    - Play
+        - Scenario: Upon pressing the play button the input from the textfield should be used as the username for the player who is playing, also player should be transferred to game window
+        - Test: Inputting string for username and pressing player transfers user to correct windowm, lobby choice, and username is visible in the lobby, so it works
+            PASSED
+    - Return to Menu
+        - Scenario : Upon pressing the button player should be return to the main menu window
+        - test: Pressing the button, it does return to main menu
+        PASSED
+
+TextInput
+
+    - Username input
+        - Scenario: Upon pressing the play button the username should be associated with the player
+        - Test: inputting a string and pressing play, transfers to next window correctly, (lobbychoice) , Lobby displays right username for player
+        PASSED

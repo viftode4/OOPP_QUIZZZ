@@ -1,0 +1,31 @@
+Button tests
+    - Singleplayer
+
+        - Scenario : upon clicking the button the user should be redirected to the singleplayer Name Choice Window
+            - Test: Clicking the button redirects the user to the correct window, namely SinglePlayerNameChoiceWindow.fxml, where a username can be chosen.
+            Passed
+
+    - Multiplayer
+
+        - Scenario : Upon clicking the button the user should be redirected to the Multiplayer Name Choice Window
+            - Test: Clicking the button redirects the user to the correct window, namely NameChoiceWindow.fxml, where a username can be chosen.
+            Passed
+
+    - LeaderBoard
+
+        - Scenario : Upon clicking the button the user should be redirected to a window showing the leaderboard of the best singleplayer games with username
+            - Test: Clicking the button redirects the user to the correct window, namely PastGamesWindow.fxml
+            Passed
+
+    - How to Play?
+
+        -Scenario : Upon clicking the button the user should be redirected to a window where the basics of the game is explained
+            - Test : Clicking on the button redirects the user to the correct window, namely HowToPlayWindow.fxml
+            Passed
+
+    - Admin interface
+
+        - Scenario : Upon clicking the button the user should be redirected to a window where the records of the database are shown and can be interacted with
+            - Test: Clicking on the button redirects the user to the correct window, namely AdminInterface.fxml
+            Passed
+

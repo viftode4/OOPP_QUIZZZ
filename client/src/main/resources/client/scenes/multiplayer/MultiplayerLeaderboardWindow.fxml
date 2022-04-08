@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="multiplayerLeaderboardWindow" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.multiplayer.MultiplayerLeaderboardWindowCtrl">
+   <children>
+      <TableView id="leaderboardTableView" fx:id="leaderboardTableView" layoutX="186.0" layoutY="138.0" prefHeight="445.0" prefWidth="1028.0" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="138.0">
+      </TableView>
+      <Text layoutX="432.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaderboard">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Text>
+      <Button id="leaveGameButton" fx:id="leaveGame" layoutX="1040.0" layoutY="565.0" mnemonicParsing="false" onAction="#leaveGame" prefHeight="97.0" prefWidth="244.0" style="-fx-background-color: fff;" text="Leave game" textFill="#0179ff" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="42.0">
+         <font>
+            <Font name="Century Gothic" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+Buttons
+
+ - Answer buttons
+
+    - Scenario: The answer buttons should contain potential answers to the question.
+                Upon pressing any of the question buttons, the buttons should be coloured according to correctness.
+                The user's score should be updated if the questions was answered correctly.
+
+        - Test1 : Choosing the correct answer, the buttons colour according to whether they displayed a correct or incorrect answer to the question.
+                  The score is updated.
+                  After some time, the leaderboard is displayed.
+                  Passed.
+
+        - Test2 : Choosing incorrect answer, the Buttons colour according to whether they held a correct or incorrect answer to the question.
+                  The score is not updated.
+                  After some time, the leaderboard is displayed.
+                  Passed.
+
+        - Test3 : Not choosing an answer, the buttons colour according to whether they displayed a correct or incorrect answer to the question.
+                  The score is not updated.
+                  After some time, the leaderboard is displayed.
+                  Passed.
+
+ - Joker buttons: Please see TestJokers.txt for tests on jokers.
+
+ - Leave game button
+
+    - Scenario: The user wants to leave the game by clicking the "Leave Game" button.
+
+        - Test: Upon clicking the "leave game" button, a prompt is given asking the user if they really wanted to leave the game.
+                When "No" is clicked, nothing happens and the game continues.
+                When "Yes" is clicked, the player is returned to the main menu.
+                Passed.
+
+Information displays
+
+ - Question display
+
+    - Scenario: A new question should be displayed everytime the leaderboard has been shown for 5 seconds
+        - Test: Playing the game, seeing that the question is displayed correctly.
+        Passed.
+
+ -Score display
+
+     - Scenario : The player's score should be displayed all the time while answering the questions and is inside the game playing
+                  Score display should be updated according to correct answer or kept the same upon wrong answer
+
+         - Test1: Playing the game, choosing the correct answer for the question, The score updates correctly for the player(s) who answered correctly
+                  Passed.
+
+         - Test2: Playing the game, choosing incorrect answer for the question, The score display's the same number as before
+                  Passed.
+
+ - Timer display
+
+     - Scenario : The player sees how the time decreases overtime as they are trying to answer the question or when the question has been answered
+
+         - Test 1: Playing the game, and all players answer before time ends.
+                   The timer display refreshes to 8 upon new question.
+                   It decreases by 1 every second until all players answer.
+                   The timer increases to 3 seconds, and displays the correct answers to all players.
+                   When the timer reaches 0, the leaderboard is displayed.
+                   Passed.
+
+         - Test 2: Playing the game, and not all players answer before time ends.
+                   The timer display refreshes to 8 upon new question.
+                   It decreases by 1 every second until it reaches zero.
+                   The timer increases to 3 seconds, and displays the correct answers to all players.
+                   When the timer reaches 0, the leaderboard is displayed.
+                   Passed.
+
+ - Answer display
+
+     - Scenario: The player can read the answer's fully without it being cut off with "..."
+
+         - Test: Upon showing answers, the right answer is displayed and completely readable.
+                 Passed

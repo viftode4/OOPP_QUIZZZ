@@ -1,0 +1,39 @@
+Buttons
+ - Answer buttons
+
+     - Scenario: They should contain answers to the question . Upon pressing any of the question buttons, the buttons should be coloured according to correctness
+                 The user's score should be updated
+
+         - Test1 : Choosing the correct answer, the buttons colour according to wether they held a correct or incorrect answer to the question
+                   The score is updated
+         Passed
+
+         - Test2 : Choosing incorrect answer,  the BUttons colour according to wether they held a correct or incorrect answer to the question
+                   The score is updated
+         Passed
+
+
+Display
+
+ -Score display
+
+     - Scenario : The player's score should be displayed all the time while answering the questions and is inside the game playing
+                 Score display should be updated according to correct answer or kept the same upon wrong answer
+
+        - Test1: Playing the game, choosing the correct answer for the question, The score updates correctly
+        Passed
+
+        - Test2: Playing the game, choosing incorrect answer for the question, The score display's the same number as before
+        Passed
+
+  - Timer display
+
+    - Scenario : The player sees how the time decreases overtime as they are trying to answer the question
+        - Test: Playing the game the timer display refreshes to 8 upon new answer, it decreases by 1 every second , tells user Time's up when 8 seconds have passed
+        Passed
+
+  - Question display
+
+      - Scenario: A new question should be displayed everytime the timer runs out and restarts
+          - Test: Playing the game, seeing that the question is displayed correctly.
+          Passed

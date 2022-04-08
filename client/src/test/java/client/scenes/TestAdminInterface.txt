@@ -1,0 +1,58 @@
+Buttons
+
+    -Add activity
+
+        - Scenario : Upon filling in the textfields and choosing an image file of the correct format, a new activity should be created and added into the database
+                     It should also immediately show in the tableview as the last record. If some of the fields have not been filled user should be prompted to try again
+            - Test1: The fields were all filled with text and image was chosen. The record is correctly added in the database and shown in the tableview.
+                     The activity was created, visible in database and tableview, editable, deletable etc.
+            Passed
+
+            - Test2: Title field is not filled in or left with original filler text all other fields are correctly inputted
+                     The activity was not created , user was prompted to try again with a message
+            Passed
+
+            - Test3: Consumption is left with original text or no text or not digits, all other fields are correctly inputted
+                     The activity was not created , user was prompted to try again with a message
+            Passed
+
+            - Test4: Image was not chosen , all other fields were correctly inputted
+                     The activity was not created , user was prompted to try again with a message
+            Passed
+
+    -Return to Main Menu
+
+        - Scenario: Upon clicking on the button the user should be returned to the main menu window.
+            - Test: Upon clicking the user is returned to the correct window MainMenuWindow.fxml
+            Passed
+
+TableView
+
+    - Records
+
+        - Scenario: Upon entering this screen the contents of the database records should be displayed
+            - Test: Navigating to the screen shows the tableview containing elements from the h2 database, with corresponding columns being fields of the records
+            Passed
+
+    - Editability
+
+        - Scenario: Clicking on Activity and Consumption columns should allow the user to change the text or number, leading to change in the record in the database
+            - Test: Clicking on the Text parts of the records in the Activity column allows the user to input new values,
+                    upon committing the change the database is also updated according to the new input, this was checked
+                    by looking at the h2 database console.
+            Passed
+    - Editability (Updating image)
+
+        - Scenario: Clicking on upload image for a given row (record) should have the user choose an image file of .jpg .png .jpeg format
+                    Upon making the choice and selecting a file, the given row's record's image field should now contain the newly chosen image
+            - Test: Clicking on upload image brings up a file chooser dialogue, that correctly filters the files only to the 3 formats.
+                    Upon choosing the image, the tableview is updated with the image at the right position, and the image is also updated on the database
+                    This was checked through h2 console.
+            Passed
+
+
+    - Editability (Delete)
+        - Scenario: Clicking on the delete button for a given row should delete that record from the database and remove it from the tableview
+            - Test: Clicking on delete removes the record from the database (checked through h2 console)
+                    It is also removed from the tableview
+            Passed

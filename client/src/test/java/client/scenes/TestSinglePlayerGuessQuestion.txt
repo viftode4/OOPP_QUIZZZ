@@ -1,0 +1,63 @@
+Buttons
+
+ -Submit
+    - Scenario : Player upon clicking should be shown wether their answer was correct (through colour) or not and have score updated accordingly
+
+        - Test1: playing the game, giving the correct guess, the textfield is colored green, and score is updated with points earned
+        Passed
+
+        - Test2: Playing the game, giving wrong answer, thextfield is colored red , and score is not updated
+        Passed
+
+
+ - Leave Game
+
+    - Scenario : player should be return to the main menu after clicking on the button
+        - Test : clicking on the button correctly returns the player to the main menu, namely the MainMenuWindow.fxml
+        Passed
+
+Displays
+
+ -Score display
+
+     - Scenario : The player's score should be displayed all the time while answering the questions and is inside the game playing
+                 Score display should be updated according to correct answer or kept the same upon wrong answer
+
+        - Test1: Playing the game, choosing the correct answer for the question, The score updates correctly
+        Passed
+
+        - Test2: Playing the game, choosing incorrect answer for the question, The score display's the same number as before
+        Passed
+
+  - Timer display
+
+    - Scenario : The player sees how the time decreases overtime as they are trying to answer the question
+        - Test: Playing the game the timer display refreshes to 8 upon new answer, it decreases by 1 every second , tells user Time's up when 8 seconds have passed
+        Passed
+  - Question display
+
+      - Scenario: A new question should be displayed everytime the timer runs out and restarts
+          - Test: Playing the game, seeing that the question is displayed correctly.
+          Passed
+
+
+TextField
+
+    - Providing answer for guessing
+        - Scenario : The user inputs a guess that is a number , then upon clicking Submit the colour should change
+                     according to the correctness of the answer, plus score should be updated if the guess was correct
+            - Test1 : Providing normal integer, correct answer, colour becomes green, score is updated accordingly, correct answer is shown
+            Passed
+
+            - Test2 : Providing string "jasjasj", the game does not break, NumberFormatException is thrown,
+                      textfield is not colored, score is not updated(as it should not)
+            FAILED (should show wrong answer characteristics, colour, shownanswer)
+
+            - Test3 : Providing a big number (10000000000000000000000000000000000000000000000000000),
+                      game does not break, it continues after, NumberFormatException is thrown, textfield is not colored, score not updated(as it should not)
+            FAILED (should show wrong answer characteristics, colour, shownanswer)
+
+            - Test3 : Providing correct integer, upon showing answer clicking on submit again leads to NumberFormatException, this should be handled as special case
+                      If the numberformatexcepetion in the previous 2 tests are handled in the general case, then this test case could show red textfield eventhough the
+                      answer was correct because of "Correct: 100" being leading to the exception.
+            FAILED

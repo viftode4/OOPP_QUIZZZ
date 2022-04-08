@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="EndWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SinglePlayerEndWindowCtrl">
+   <VBox alignment="BOTTOM_CENTER" prefHeight="282.0" prefWidth="1920.0" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+          <Text id="gameEndText" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME OVER" wrappingWidth="787.5537109375">
+              <font>
+                  <Font name="Century Gothic" size="130.0" />
+              </font>
+          </Text>
+          <Text id="gameStatsText" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Statistics:">
+              <font>
+                  <Font name="Century Gothic" size="21.0" />
+              </font>
+          </Text>
+          <Text id="questionsCorrectText" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions answered correctly:">
+              <font>
+                  <Font name="Century Gothic" size="21.0" />
+              </font>
+          </Text>
+         <Text id="questionsCorrectText" fx:id="questionNoGood" strokeType="OUTSIDE" strokeWidth="0.0" text=" ###">
+            <font>
+               <Font name="Century Gothic" size="21.0" />
+            </font>
+         </Text>
+          <Text id="pointsScoredText" strokeType="OUTSIDE" strokeWidth="0.0" text="Points scored:">
+              <font>
+                  <Font name="Century Gothic" size="21.0" />
+              </font>
+          </Text>
+         <Text id="pointsScoredText" fx:id="scoreText" strokeType="OUTSIDE" strokeWidth="0.0" text=" ###">
+            <font>
+               <Font name="Century Gothic" size="21.0" />
+            </font>
+         </Text>
+      </children>
+   </VBox>
+   <HBox alignment="BOTTOM_CENTER" layoutY="500.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="200.0" prefWidth="1400.0" translateY="50.0" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <HBox alignment="BOTTOM_CENTER" prefHeight="438.0" prefWidth="1920.0" AnchorPane.bottomAnchor="642.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <VBox alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="-1.0" prefHeight="1021.0" prefWidth="1920.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+          <Button id="playAgainButton" fx:id="playAgain" mnemonicParsing="false" onAction="#playAgain" prefHeight="70.0" prefWidth="321.0" style="-fx-background-color: fff;" text="Play again" textFill="#0179ff">
+              <font>
+                  <Font name="Century Gothic" size="36.0" />
+              </font>
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+          </Button>
+          <Button id="returnToMenuButton" fx:id="returnToMenu" mnemonicParsing="false" onAction="#jumpToMenu" prefHeight="70.0" prefWidth="343.0" style="-fx-background-color: fff;" text="Return to menu" textFill="#0179ff">
+              <font>
+                  <Font name="Century Gothic" size="36.0" />
+              </font>
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+          </Button>
+          <Button id="closeGameButton" fx:id="closeGame" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="191.0" style="-fx-background-color: fff;" text="Close game" textFill="#0179ff">
+              <font>
+                  <Font name="Century Gothic" size="22.0" />
+              </font>
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+          </Button>
+      </children>
+   </VBox>
+</AnchorPane>
